@@ -54,17 +54,16 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = "images.json";
+var mURL = "images.json";
 
-var mRequest = new XMLHttpRequest();
 mRequest.onreadystatechange = function () {
 
-    if (mRequest.readyState == 4 && mRequest.status == 200) {
+    if (mRequest.readyState === 4 && mRequest.status === 200) {
         try {
             mJson = JSON.parse(mRequest.responseText);
             console.log(mJson);
         } catch (err) {
-            console.log(err.message)
+            console.log(err.message);
         }
     }
 };
@@ -72,12 +71,22 @@ mRequest.onreadystatechange = function () {
 mRequest.open("GET", mURL, true);
 mRequest.send();
 
+$.getJSON(mURL, function (data) {
+    $.each(data.items, function (f) {
+        b = GalleryImage(f.imgLocation, f.description, f.date, f.imgPath);
+        mImages.push(b);
+        console.log(mImages);
+    });
+});
+
+
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
 function makeGalleryImageOnloadCallback(galleryImage) {
     return function (e) {
         galleryImage.img = e.target;
         mImages.push(galleryImage);
+        console.log(mImages);
     }
 }
 
@@ -89,7 +98,13 @@ $(document).ready(function () {
 });
 
 window.addEventListener('load', function () {
-
+$.getJSON(mURL, function (data) {
+    $.each(data.items, function (f) {
+        b = GalleryImage(f.imgLocation, f.description, f.date, f.imgPath);
+        mImages.push(b);
+        console.log(mImages);
+    });
+});
     console.log('window loaded');
 
 }, false);
