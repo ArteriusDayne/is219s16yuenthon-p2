@@ -1,0 +1,46 @@
+{
+    "images": [
+        {
+            "imgPath": "img/stuff/1.jpg",
+            "imgLocation": "Azeroth",
+            "description": "Bonsai Valley",
+            "date": "01/01/2016"
+        },
+        {
+            "imgPath": "img/stuff/2.jpg",
+            "imgLocation": "Tamriel",
+            "description": "Mt. Manethril, Tamriel",
+            "date": "01/02/2016"
+        },
+        {
+            "imgPath": "img/stuff/3.jpg",
+            "imgLocation": "Lake Velen",
+            "description": "Campfire by Lake Velen",
+            "date": "01/03/2016"
+        },
+        {
+            "imgPath": "img/stuff/4.jpg",
+            "imgLocation": "Apex Plains",
+            "description": "The Apex Plains, Tamriel",
+            "date": "01/04/2016"
+        },
+        {
+            "imgPath": "img/stuff/5.jpg",
+            "imgLocation": "Cypher's Vale",
+            "description": "Cypher's Vale, Tamreil",
+            "date": "01/05/2016"
+        },
+        {
+            "imgPath": "img/stuff/6.jpg",
+            "imgLocation": "The Wall",
+            "description": "The Wall, Westeros",
+            "date": "01/06/2016"
+        },
+        {
+            "imgPath": "img/stuff/7.jpg",
+            "imgLocation": "Craigs of Arizona",
+            "description": "The Night Sky in Arizona",
+            "date": "01/07/2016"
+        }
+    ]
+}
